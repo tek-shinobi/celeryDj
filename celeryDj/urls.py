@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from taskmanager.views import celery_view
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('celerytask/', celery_view),
 ]
